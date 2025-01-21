@@ -64,24 +64,27 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
        "nationality": "Indian"
      }
      ```
-     ![Screenshot 2025-01-21 143334](https://github.com/user-attachments/assets/5da8a8ba-ad4f-43d7-bab0-aaaf40e0c096)
+### Postman Screenshots
+![Screenshot 2025-01-21 143334](https://github.com/user-attachments/assets/5da8a8ba-ad4f-43d7-bab0-aaaf40e0c096)
 
 
 2. **Retrieve all actors**
    - Method: GET
    - URL: `http://localhost:8080/actors`
-  
-   - ![Screenshot 2025-01-21 143410](https://github.com/user-attachments/assets/8a045506-5bc2-4bb0-bbe2-5d635e3f56a0)
+   - 
+  ### Postman Screenshots
+ ![Screenshot 2025-01-21 143410](https://github.com/user-attachments/assets/8a045506-5bc2-4bb0-bbe2-5d635e3f56a0)
 
 
 3. **Retrieve an actor by ID**
    - Method: GET
    - URL: `http://localhost:8080/actors/{id}`
-  
-   - ![Screenshot 2025-01-21 164932](https://github.com/user-attachments/assets/edb1f136-907f-47f8-ba1d-8b55739a2d21)
+
+### Postman Screenshots
+![Screenshot 2025-01-21 164932](https://github.com/user-attachments/assets/edb1f136-907f-47f8-ba1d-8b55739a2d21)
 
 
-4. **Update an actor by ID**
+3. **Update an actor by ID**
    - Method: PUT
    - URL: `http://localhost:8080/actors/{id}`
    - Body: 
@@ -93,14 +96,22 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
        "nationality": "Updated Nationality"
      }
      ```
-     ![Screenshot 2025-01-21 164944](https://github.com/user-attachments/assets/b00524f2-afc5-416a-a423-ffd8b02a384d)
+### Postman Screenshots
+![Screenshot 2025-01-21 164944](https://github.com/user-attachments/assets/9fd66c90-880f-4582-b48a-1764b35c5841)
 
 
-5. **Delete an actor by ID**
+4. **Delete an actor by ID**
    - Method: DELETE
    - URL: `http://localhost:8080/actors/{id}`
   
-   - ![Screenshot 2025-01-21 164932](https://github.com/user-attachments/assets/24d50e81-4121-42ce-ad6c-23b9c8c9e47c)
+### Postman Screenshots
+![Screenshot 2025-01-21 164932](https://github.com/user-attachments/assets/24d50e81-4121-42ce-ad6c-23b9c8c9e47c)
+
+## Database
+The application uses MySQL as the database to store actor information. Ensure that you have MySQL installed and configured before running the application.
+
+### MySQL Database Screenshots
+![image](https://github.com/user-attachments/assets/a707e506-0e8b-4bbd-9210-3f8747ba02cf)
 
 
 ## Conclusion

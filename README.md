@@ -94,7 +94,7 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
 
 
 
-3. **Update an actor by ID**
+4. **Update an actor by ID**
    - Method: PUT
    - URL: `http://localhost:8080/actors/{id}`
    - Body: 
@@ -111,7 +111,7 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
 
 
 
-4. **Delete an actor by ID**
+5. **Delete an actor by ID**
    - Method: DELETE
    - URL: `http://localhost:8080/actors/{id}`
   

@@ -19,8 +19,6 @@ public interface ActorRepository extends JpaRepository<Actor, Integer> {
 	public List<Actor> findByActorName(String actorName);
 	public List<Actor> findByAge(int age);
 	public List<Actor> findByAgeBetween(int age1, int age2);
-	
-	
 	public List<Actor> findByIndustry(String industry);
 
 	

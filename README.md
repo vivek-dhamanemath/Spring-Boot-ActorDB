@@ -74,7 +74,7 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
      }
      ```
 ### Postman Screenshots
-![Screenshot 2025-01-21 143334](https://github.com/user-attachments/assets/5da8a8ba-ad4f-43d7-bab0-aaaf40e0c096)
+![image](https://github.com/user-attachments/assets/e7744c39-f54e-4d29-bce1-a56c5e521521)
 
 
 2. **Retrieve all actors**
@@ -82,7 +82,7 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
    - URL: `http://localhost:8080/actors`
    - 
   ### Postman Screenshots
- ![Screenshot 2025-01-21 143410](https://github.com/user-attachments/assets/8a045506-5bc2-4bb0-bbe2-5d635e3f56a0)
+![image](https://github.com/user-attachments/assets/ce792d79-9e35-4c96-8a67-b0cca1987a9a)
 
 
 3. **Retrieve an actor by ID**
@@ -90,7 +90,8 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
    - URL: `http://localhost:8080/actors/{id}`
 
 ### Postman Screenshots
-![Screenshot 2025-01-21 164932](https://github.com/user-attachments/assets/edb1f136-907f-47f8-ba1d-8b55739a2d21)
+![image](https://github.com/user-attachments/assets/a36d26ef-bb1f-4f86-873c-1a18ecd61c50)
+
 
 
 3. **Update an actor by ID**
@@ -106,7 +107,8 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
      }
      ```
 ### Postman Screenshots
-![Screenshot 2025-01-21 164944](https://github.com/user-attachments/assets/9fd66c90-880f-4582-b48a-1764b35c5841)
+![image](https://github.com/user-attachments/assets/581f8998-c575-46b1-9638-5183da40b5b1)
+
 
 
 4. **Delete an actor by ID**
@@ -114,13 +116,14 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
    - URL: `http://localhost:8080/actors/{id}`
   
 ### Postman Screenshots
-![Screenshot 2025-01-21 164932](https://github.com/user-attachments/assets/24d50e81-4121-42ce-ad6c-23b9c8c9e47c)
+![image](https://github.com/user-attachments/assets/c034bb7f-dc1c-4d2c-90df-45b7c4ffc1cc)
+
 
 ## Database
 The application uses MySQL as the database to store actor information. Ensure that you have MySQL installed and configured before running the application.
 
 ### MySQL Database Screenshots
-![image](https://github.com/user-attachments/assets/a707e506-0e8b-4bbd-9210-3f8747ba02cf)
+![image](https://github.com/user-attachments/assets/e7b0f86c-90e5-4151-b089-e9f4fe81cb04)
 
 
 ## Conclusion

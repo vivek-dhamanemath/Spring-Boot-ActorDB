@@ -48,6 +48,15 @@ The application exposes the following REST endpoints:
 - `PUT /actors/{id}`: Update an actor by ID
 - `DELETE /actors/{id}`: Delete an actor by ID
 
+## RESTful Web Service/API
+The application follows RESTful design principles to provide a scalable and maintainable API. Each endpoint corresponds to a specific operation on the actor resource, and the HTTP methods (POST, GET, PUT, DELETE) are used to perform these operations. The API is designed to be stateless, meaning each request from a client contains all the information needed to process the request.
+
+### Key Features of the RESTful API:
+- **Resource-Based**: The API is centered around the actor resource.
+- **Stateless**: Each request is independent and contains all necessary information.
+- **Uniform Interface**: The API uses standard HTTP methods and status codes.
+- **Client-Server Architecture**: The client and server are separate, allowing for independent development and scaling.
+
 ## Testing with Postman
 Postman is a popular tool for testing REST APIs. You can use Postman to test the endpoints provided by this application.
 

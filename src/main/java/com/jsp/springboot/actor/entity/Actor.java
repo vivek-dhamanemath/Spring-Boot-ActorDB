@@ -12,7 +12,7 @@ public class Actor {
 	private int age;
 	private String nationality;
 	private String industry;
-	
+
 	public int getActorId() {
 		return actorId;
 	}
@@ -43,7 +43,7 @@ public class Actor {
 	public void setIndustry(String industry) {
 		this.industry = industry;
 	}
-	
-	
-	
+
+
+
 }

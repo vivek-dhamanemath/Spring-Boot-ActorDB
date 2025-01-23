@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,17 +46,17 @@ public class ActorController {
 		return actorService.findAllActors();	
 	}
 
-	@GetMapping("/id")
-	public ResponseEntity<ResponseStrcture<Actor>> findByActorId(int actorId) {
+	@GetMapping("/{actorId}")  //http://localhost:8080/actors/101 (here we directly passing the id value(101))
+	public ResponseEntity<ResponseStrcture<Actor>> findByActorId(@PathVariable int actorId) {
 		return actorService.findByActorId(actorId);	
 	}
 
-	@PutMapping()
+	@PutMapping("/id")  //http://localhost:8080/actors/id (here we just passing the attribute(id) then in POSTMAN we write id=101)
 	public ResponseEntity<ResponseStrcture<Actor>> updateActorById(int actorId,@RequestBody Actor updateActor) {
 		return actorService.updateByActorId(actorId, updateActor);	
 	}
 
-	@DeleteMapping()
+	@DeleteMapping("/id")
 	public ResponseEntity<ResponseStrcture<Actor>> deleteByActorId(int actorId) {
 		return actorService.deleteByActorId(actorId);	
 	}

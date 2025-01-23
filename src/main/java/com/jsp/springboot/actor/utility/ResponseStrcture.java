@@ -1,15 +1,11 @@
 package com.jsp.springboot.actor.utility;
 
-import java.util.List;
-
-import com.jsp.springboot.actor.entity.Actor;
-
 public class ResponseStrcture<T> {
-	
+
 	private int stauscode;
 	private String message;
 	private T actor;
-	
+
 	public int getStauscode() {
 		return stauscode;
 	}
@@ -28,9 +24,5 @@ public class ResponseStrcture<T> {
 	public void setActor(T actor) {
 		this.actor = actor;
 	}
-	
-	
-	
-	
 
 }

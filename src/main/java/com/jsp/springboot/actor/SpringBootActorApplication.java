@@ -23,11 +23,11 @@ public class SpringBootActorApplication {
 	 * 
 	 * }
 	 */
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootActorApplication.class, args);
-		
-		
+
+
 	}
 
 }

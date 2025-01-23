@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.jsp.springboot.actor.entity.Actor;
+import com.jsp.springboot.actor.exception.ActorNotFoundByAgeException;
+import com.jsp.springboot.actor.exception.ActorNotFoundByIdException;
+import com.jsp.springboot.actor.exception.ActorNotFoundByIndustryException;
+import com.jsp.springboot.actor.exception.ActorNotFoundByNameException;
 import com.jsp.springboot.actor.repositroy.ActorRepository;
 import com.jsp.springboot.actor.service.ActorService;
 import com.jsp.springboot.actor.utility.ResponseStrcture;
@@ -38,7 +42,8 @@ public class ActorServiceImpl implements ActorService {
 		List<Actor> actors = actorRepository.findAll();
 
 		if(actors.isEmpty()) {
-			return null;
+			throw new ActorNotFoundByIdException("Actor not found");
+			
 		}else {
 
 			ResponseStrcture<List<Actor>> responseStrcture = new ResponseStrcture<List<Actor>>();
@@ -65,7 +70,7 @@ public class ActorServiceImpl implements ActorService {
 			return new ResponseEntity<ResponseStrcture<Actor>>(responseStrcture, HttpStatus.FOUND);
 
 		}else {
-			return null;
+			throw new ActorNotFoundByIdException("Actor not found");
 		}
 	}
 
@@ -76,18 +81,17 @@ public class ActorServiceImpl implements ActorService {
 		if(optional.isPresent()) {
 			Actor existingActor = optional.get();
 			updateActor.setActorId(existingActor.getActorId());
-
+			actorRepository.save(updateActor);
+			
 			ResponseStrcture<Actor> responseStrcture = new ResponseStrcture<Actor>();
 			responseStrcture.setStauscode(HttpStatus.OK.value());
 			responseStrcture.setMessage("Actor object succesfully Updated ByActorId!!");
 			responseStrcture.setActor(updateActor);
 
-			actorRepository.save(updateActor);
-
 			return new ResponseEntity<ResponseStrcture<Actor>>(responseStrcture, HttpStatus.OK);
 
 		}else {
-			return null;
+			throw new ActorNotFoundByIdException("Actor not found");
 		}
 	}
 
@@ -106,7 +110,7 @@ public class ActorServiceImpl implements ActorService {
 
 			return new ResponseEntity<ResponseStrcture<Actor>>(responseStrcture, HttpStatus.OK);
 		}else {
-			return null;
+			throw new ActorNotFoundByIdException("Actor not found");
 		}
 	}
 
@@ -115,7 +119,8 @@ public class ActorServiceImpl implements ActorService {
 		List<Actor> actors = actorRepository.findByActorName(actorName);
 
 		if(actors.isEmpty()) {
-			return null;
+			throw new ActorNotFoundByNameException("Actor not found");
+			
 		}else {
 			ResponseStrcture<List<Actor>> responseStrcture = new ResponseStrcture<List<Actor>>();
 			responseStrcture.setStauscode(HttpStatus.FOUND.value());
@@ -132,7 +137,8 @@ public class ActorServiceImpl implements ActorService {
 		List<Actor> actors = actorRepository.findByAge(age);
 
 		if(actors.isEmpty()) {
-			return null;
+			throw new ActorNotFoundByAgeException("Actor not found");
+			
 		}else {
 			ResponseStrcture<List<Actor>> responseStrcture = new ResponseStrcture<List<Actor>>();
 			responseStrcture.setStauscode(HttpStatus.FOUND.value());
@@ -149,7 +155,8 @@ public class ActorServiceImpl implements ActorService {
 		List<Actor> actors = actorRepository.findByAgeBetween(age1, age2);
 
 		if(actors.isEmpty()) {
-			return null;
+			throw new ActorNotFoundByAgeException("Actor not found");
+			
 		}else {
 			ResponseStrcture<List<Actor>> responseStrcture = new ResponseStrcture<List<Actor>>();
 			responseStrcture.setStauscode(HttpStatus.FOUND.value());
@@ -165,7 +172,8 @@ public class ActorServiceImpl implements ActorService {
 		List<Actor> actors = actorRepository.findByIndustry(industry);
 
 		if(actors.isEmpty()) {
-			return null;
+			throw new ActorNotFoundByIndustryException("Actor not found");
+			
 		}else {
 			ResponseStrcture<List<Actor>> responseStrcture = new ResponseStrcture<List<Actor>>();
 			responseStrcture.setStauscode(HttpStatus.FOUND.value());

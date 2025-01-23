@@ -118,6 +118,14 @@ Postman is a popular tool for testing REST APIs. You can use Postman to test the
 ### Postman Screenshots
 ![image](https://github.com/user-attachments/assets/c034bb7f-dc1c-4d2c-90df-45b7c4ffc1cc)
 
+## Exception Handling
+The application includes a robust exception handling mechanism to ensure that errors are properly managed and meaningful responses are returned to the client.
+
+### Key Components:
+- **ActorNotFoundByIdException.java**: Custom exception thrown when an actor with the specified ID is not found in the database.
+- **ActorNotFoundByNameException.java**: Custom exception thrown when an actor with the specified name is not found in the database.
+- **ActorNotFoundByIndustryException.java**: Custom exception thrown when no actors are found in the specified industry within the database.
+- **ActorNotFoundByAgeException.java**: Custom exception thrown when no actors matching the specified age criteria are found in the database.
 
 ## Database
 The application uses MySQL as the database to store actor information. Ensure that you have MySQL installed and configured before running the application.

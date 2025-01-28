@@ -46,8 +46,13 @@ public class ActorController {
 		return actorService.findAllActors();	
 	}
 
-	@GetMapping("/{actorId}")  //http://localhost:8080/actors/101 (here we directly passing the id value(101))
-	public ResponseEntity<ResponseStrcture<Actor>> findByActorId(@PathVariable int actorId) {
+//	@GetMapping("/{actorId}")  //http://localhost:8080/actors/101 (here we directly passing the id value(101))
+//	public ResponseEntity<ResponseStrcture<Actor>> findByActorId(@PathVariable int actorId) {
+//		return actorService.findByActorId(actorId);	
+//	}
+	
+	@GetMapping("/id")
+	public ResponseEntity<ResponseStrcture<Actor>> findByActorId( int actorId) {
 		return actorService.findByActorId(actorId);	
 	}
 

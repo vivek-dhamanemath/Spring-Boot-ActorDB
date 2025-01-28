@@ -1,5 +1,6 @@
 package com.jsp.springboot.actor.entity;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -7,36 +8,33 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Actor {
+public class Director {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long actorID;
+    private Long directorID;
 
     private String name;
-    private int age;
-    private String nationality;
-    private String industry;
+    private LocalDate dateOfBirth;
+    private String bio;
 
-    @ManyToMany(mappedBy = "actors")
+    @OneToMany(mappedBy = "director", cascade = CascadeType.ALL)
     private List<Movie> movies;
 
-    @OneToMany(mappedBy = "actor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "director", cascade = CascadeType.ALL)
     private List<Award> awards;
 
     
     //Getters and Setters
-	public Long getActorID() {
-		return actorID;
+	public Long getDirectorID() {
+		return directorID;
 	}
 
-	public void setActorID(Long actorID) {
-		this.actorID = actorID;
+	public void setDirectorID(Long directorID) {
+		this.directorID = directorID;
 	}
 
 	public String getName() {
@@ -47,28 +45,20 @@ public class Actor {
 		this.name = name;
 	}
 
-	public int getAge() {
-		return age;
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
-	public String getNationality() {
-		return nationality;
+	public String getBio() {
+		return bio;
 	}
 
-	public void setNationality(String nationality) {
-		this.nationality = nationality;
-	}
-
-	public String getIndustry() {
-		return industry;
-	}
-
-	public void setIndustry(String industry) {
-		this.industry = industry;
+	public void setBio(String bio) {
+		this.bio = bio;
 	}
 
 	public List<Movie> getMovies() {
@@ -89,5 +79,11 @@ public class Actor {
     
     
     
-}
+}	
+	
+	
+	
+	
+	
+	
 
